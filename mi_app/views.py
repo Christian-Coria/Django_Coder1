@@ -15,12 +15,11 @@ def saludar_a(request,nombre):
     return HttpResponse(f"Hola {nombre.capitalize()}")
 
 def saludo_personalizado(request):
-    context = {}
+    pass
 
-    if request.GET:
-        context["nombre"] = request.GET["nombre"]
+def mostrar_index(request):
 
-    return render(request, "mi_app/index.html", context)
+    return render(request, "mi_app/index.html", {"mi_titulo":'Bienvenido a Mi Pagina!'})
 
 def listar_cursos(request):
     context={}
